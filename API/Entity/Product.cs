@@ -5,7 +5,7 @@ namespace API.Entity;
 public class Product {
 
     [Key]
-    public int ProdcutId {get; set;}
+    public int ProductId {get; set;}
     [Required]
     public string? Name {get; set;}
     public string? Description  {get; set;}
