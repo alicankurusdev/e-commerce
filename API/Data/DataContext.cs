@@ -19,11 +19,11 @@ public DbSet<Product>  Products =>Set<Product>();
         modelBuilder.Entity<Product>().HasData(
             new List<Product>{
                 new Product{ ProductId=1 , Name="Iphone14", Description ="telephone",Price =7000,
-                IsActive=true, ImageUrl="1.jpg",stock=4},
+                IsActive=true, ImageUrl="1.jpg",Stock=4},
                  new Product{ ProductId=2 , Name="Iphone15", Description ="telephone",Price =5000,
-                IsActive=true, ImageUrl="2.jpg",stock=9},
+                IsActive=true, ImageUrl="2.jpg",Stock=9},
                  new Product{ ProductId=3 , Name="Iphone16", Description ="telephone",Price =2000,
-                IsActive=true, ImageUrl="3.jpg",stock=2}
+                IsActive=true, ImageUrl="3.jpg",Stock=2}
             }
         );
     }
