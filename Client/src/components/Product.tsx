@@ -1,5 +1,16 @@
 import { Iproduct } from "../Model/Iproduct";
-import { Card,CardContent, CardMedia, Typography } from "@mui/material";
+import {
+  Card,
+  CardActions,
+  Button,
+  CardContent,
+  CardMedia,
+  Typography,
+} from "@mui/material";
+import {AddShoppingCart } from "@mui/icons-material";
+import SearchIcon  from "@mui/icons-material/Search";
+
+
 
 interface Props {
   product: Iproduct;
@@ -7,15 +18,27 @@ interface Props {
 const Product = ({ product }: Props) => {
   return (
     <Card>
-      <CardMedia sx={{height:160, backgroundSize:"contain"}}  image={`http://localhost:5207/images/${product.imageUrl} `} />
+      <CardMedia
+        sx={{ height: 160, backgroundSize: "contain" }}
+        image={`http://localhost:5207/images/${product.imageUrl} `}
+      />
       <CardContent>
-        <Typography gutterBottom variant="h6" component="h2"  color="text-secondary">
+        <Typography
+          gutterBottom
+          variant="h6"
+          component="h2"
+          color="text-secondary"
+        >
           {product.name}
         </Typography>
         <Typography variant="body2" color="secondary">
-          {(product.price / 100).toFixed(2)}
+          {(product.price / 100).toFixed(2)} $
         </Typography>
       </CardContent>
+      <CardActions>
+        <Button variant="outlined" size="small" startIcon={<AddShoppingCart/>} color="success" >Add to Cart</Button>
+        <Button variant="outlined" size="small" startIcon={<SearchIcon/>} color="primary">View</Button>
+      </CardActions>
     </Card>
   );
 };
