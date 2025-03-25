@@ -183,3 +183,4 @@ C:\Users\dawra\Desktop\e-commerce\APi\obj\Debug\net9.0\refint\API.dll
 C:\Users\dawra\Desktop\e-commerce\APi\obj\Debug\net9.0\API.pdb
 C:\Users\dawra\Desktop\e-commerce\APi\obj\Debug\net9.0\API.genruntimeconfig.cache
 C:\Users\dawra\Desktop\e-commerce\APi\obj\Debug\net9.0\ref\API.dll
+C:\Users\dawra\Desktop\e-commerce\api\bin\Debug\net9.0\API.staticwebassets.runtime.json

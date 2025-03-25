@@ -1,21 +1,23 @@
 import { Iproduct } from "../Model/Iproduct";
+import { Card,CardContent, CardMedia, Typography } from "@mui/material";
 
-interface Props{
-    product:Iproduct
+interface Props {
+  product: Iproduct;
 }
-const Product =({product}: Props)=> {
+const Product = ({ product }: Props) => {
+  return (
+    <Card>
+      <CardMedia sx={{height:160, backgroundSize:"contain"}}  image={`http://localhost:5207/images/${product.imageUrl} `} />
+      <CardContent>
+        <Typography gutterBottom variant="h6" component="h2"  color="text-secondary">
+          {product.name}
+        </Typography>
+        <Typography variant="body2" color="secondary">
+          {(product.price / 100).toFixed(2)}
+        </Typography>
+      </CardContent>
+    </Card>
+  );
+};
 
-    return (
-      <>
-      {product.isActive  ?
-      <div> 
-        <h3>{product.name} </h3>
-        <p>{product.price}</p>
-        </div>:
-        <h2>Urun yok </h2>
-        }
-      </>
-    );
-  }
-
-export default Product
+export default Product;

@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div> 
 
-<AppBar position="static" color="primary">
+<AppBar sx={{mb:4}} position="static" color="primary">
   <Toolbar>
     <Typography variant="h6">
       E-Commerce
