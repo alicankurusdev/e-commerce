@@ -1,4 +1,4 @@
-import { Iproduct } from "../Model/Iproduct";
+import { Iproduct } from "../../Model/Iproduct";
 import {
   Card,
   CardActions,
