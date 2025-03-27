@@ -6,9 +6,11 @@ import {
   CardContent,
   CardMedia,
   Typography,
+  
 } from "@mui/material";
 import {AddShoppingCart } from "@mui/icons-material";
 import SearchIcon  from "@mui/icons-material/Search";
+import { Link } from "react-router";
 
 
 
@@ -16,6 +18,7 @@ interface Props {
   product: Iproduct;
 }
 const Product = ({ product }: Props) => {
+  console.log(product)
   return (
     <Card>
       <CardMedia
@@ -37,7 +40,8 @@ const Product = ({ product }: Props) => {
       </CardContent>
       <CardActions>
         <Button variant="outlined" size="small" startIcon={<AddShoppingCart/>} color="success" >Add to Cart</Button>
-        <Button variant="outlined" size="small" startIcon={<SearchIcon/>} color="primary">View</Button>
+        <Button component={Link} to={`/catalog/${product.productId}`}
+         variant="outlined" size="small" startIcon={<SearchIcon/>} color="primary">View</Button>
       </CardActions>
     </Card>
   );

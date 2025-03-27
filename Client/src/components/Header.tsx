@@ -31,7 +31,7 @@ const Header = () => {
             <Typography variant="h6">E-commerce</Typography>
             <Stack direction="row">
               {links.map((link) => (
-                <Button component={NavLink} sx={navStyles} to={link.to}>
+                <Button key={link.title} component={NavLink} sx={navStyles} to={link.to}>
                   {link.title}
                 </Button>
               ))}
