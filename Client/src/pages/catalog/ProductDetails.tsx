@@ -11,16 +11,16 @@ import {
   TableRow,
   Typography,
 } from "@mui/material";
+import requests from "../../api/request";
 
 const ProductDetails = () => {
   const [product, setProduct] = useState<Iproduct | null>(null);
-  const { id } = useParams();
+  const { id } = useParams<{id:string}>();
   console.log(id);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:5207/api/products/${id}`)
-      .then((response) => response.json())
+   id && requests.Catalog.details(parseInt(id))
       .then((data) => setProduct(data))
       .catch((error) => console.log(error))
       .finally(() => setLoading(false));
