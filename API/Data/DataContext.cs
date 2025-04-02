@@ -11,7 +11,7 @@ public class DataContext:DbContext
         
     } 
 public DbSet<Product>  Products =>Set<Product>();
-
+public DbSet<Cart>  Carts =>Set<Cart>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
